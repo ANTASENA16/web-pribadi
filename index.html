@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Kuliah DIMAS</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">WEBSITE PRIBADI</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="matkul.html">Mata Kuliah</a></li>
+        <li><a href="tugas.html">Tugas</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/logo-unwahas.jpg" alt="Logo Universitas Wahid Hasyim Semarang" class="logo-unwahas" />
+    <h2>Halo, saya DIMAS</h2>
+    <p>Mahasiswa Teknik Informatika di Universitas Wahid Hasyim Semarang. Website ini dibuat untuk mendokumentasikan semua tugas kuliah dalam satu tempat yang rapi dan interaktif.</p>
+    <a href="tugas.html" class="btn">Lihat Tugas Saya</a>
+  </section>
+
+  <!-- Mata Kuliah -->
+  <section class="matkul-preview">
+    <h3>Mata Kuliah Semester 1</h3>
+    <div class="matkul-grid">
+      <div class="card"><h4>Algoritma & Pemrograman</h4><a href="matkul/algoritma.html">Detail</a></div>
+      <div class="card"><h4>Praktikum Algoritma</h4><a href="matkul/praktikum.html">Detail</a></div>
+      <div class="card"><h4>Sistem Teknologi Informasi</h4><a href="matkul/sistem-ti.html">Detail</a></div>
+      <div class="card"><h4>Matematika Diskrit</h4><a href="matkul/diskrit.html">Detail</a></div>
+      <div class="card"><h4>Kalkulus</h4><a href="matkul/kalkulus.html">Detail</a></div>
+      <div class="card"><h4>Pendidikan Kewarganegaraan</h4><a href="matkul/pkn.html">Detail</a></div>
+      <div class="card"><h4>Pendidikan Agama</h4><a href="matkul/agama.html">Detail</a></div>
+      <div class="card"><h4>Pendidikan Pancasila</h4><a href="matkul/pancasila.html">Detail</a></div>
+      <div class="card"><h4>Bahasa Indonesia</h4><a href="matkul/bahasa.html">Detail</a></div>
+    </div>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 DIMAS | Universitas Wahid Hasyim Semarang</p>
+    <div class="sosmed">
+      <a href="https://instagram.com/dimassyf_m"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:dimasaffu1617@email.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/ANTASENA16"><i class="fab fa-github"></i></a>
+      <a href="https://wa.me/6283896830628"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+  <script>
+  const hour = new Date().getHours();
+  const body = document.body;
+
+  if (hour >= 6 && hour < 18) {
+    body.classList.add('day');
+  } else {
+    body.classList.add('night');
+  }
+</script>
+</body>
+</html>

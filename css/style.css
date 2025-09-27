@@ -1,0 +1,396 @@
+/* === RESET & GLOBAL === */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* === MODE SIANG & MALAM === */
+body.day {
+  background: linear-gradient(to top, #ccefff, #f0faff);
+  color: #333;
+}
+
+body.day::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: url('https://i.imgur.com/3xQxQ0v.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  animation: cloudMove 60s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes cloudMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+body.night {
+  background: radial-gradient(circle at top, #0f172a, #1e293b);
+  color: #f1f5f9;
+}
+
+body.night::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: starsMove 80s linear infinite;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes starsMove {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-100px, -200px); }
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e40af;
+  padding: 20px 40px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c7d2fe;
+}
+
+/* === HERO SECTION === */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.logo-unwahas {
+  width: 140px;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.logo-unwahas:hover {
+  transform: rotate(3deg) scale(1.08);
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+/* === BIODATA === */
+.biodata {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.biodata h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.biodata .profil {
+  width: 220px;
+  border-radius: 12px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.biodata .profil:hover {
+  transform: scale(1.05);
+}
+
+.biodata ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.biodata ul li {
+  margin-bottom: 8px;
+}
+
+/* === MATA KULIAH === */
+.matkul-preview,
+.matkul-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.matkul-preview h3,
+.matkul-page h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #1e293b;
+  position: relative;
+}
+
+.matkul-preview h3::after,
+.matkul-page h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #3b82f6;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.matkul-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #3b82f6 20%, transparent 70%);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.card i {
+  font-size: 36px;
+  color: #3b82f6;
+  margin-bottom: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+.card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  z-index: 1;
+  position: relative;
+}
+
+.card p {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  z-index: 1;
+  position: relative;
+}
+
+.card a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-decoration: none;
+  z-index: 1;
+  position: relative;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+.kontak {
+  max-width: 700px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.kontak::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #3b82f6 20%, transparent 70%);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.kontak h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  position: relative;
+  z-index: 1;
+}
+
+.kontak h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #3b82f6;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.kontak p {
+  font-size: 17px;
+  margin-bottom: 16px;
+  color: #334155;
+  z-index: 1;
+  position: relative;
+}
+
+.kontak a {
+  font-size: 17px;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.kontak a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.matkul-list {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.matkul-list h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.matkul-list ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.matkul-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.btn-detail {
+  background-color: #3b82f6;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-detail:hover {
+  background-color: #2563eb;
+}
