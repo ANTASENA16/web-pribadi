@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Bilangan - Blog Pribadi</title>
+
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #006699, #00a8cc);
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      background: #004466;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00ccff;
+    }
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #006699;
+      border-bottom: 2px solid #00a8cc;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    .card {
+      background: #f9fbfc;
+      border-left: 5px solid #00a8cc;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background: #006699;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    footer {
+      background: #004466;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog Pribadi - Sistem Bilangan</h1>
+    <p>Oleh: DIMAS </p>
+  </header>
+
+  <nav>
+    <a href="#pengantar">Pengantar</a>
+    <a href="#jenis">Jenis</a>
+    <a href="#tabel">Tabel Konversi</a>
+    <a href="#referensi">Referensi</a>
+  </nav>
+
+  <main>
+    <section id="pengantar">
+      <h2>Pengantar</h2>
+      <p>
+        <b>Sistem bilangan</b> adalah metode untuk merepresentasikan angka menggunakan simbol tertentu. 
+        Sistem ini menjadi dasar dalam <i>matematika</i>, <i>ilmu komputer</i>, dan <i>elektronika</i>. 
+        Setiap sistem memiliki basis (radix) yang menentukan banyaknya simbol yang digunakan.
+      </p>
+    </section>
+
+    <section id="jenis">
+      <h2>Jenis-Jenis Sistem Bilangan</h2>
+
+      <div class="card">
+        <h3>1. Bilangan Desimal (Base 10)</h3>
+        <p>
+          Sistem bilangan paling umum yang kita gunakan sehari-hari. 
+          Menggunakan 10 angka (0–9), dengan nilai tergantung posisi digit.
+        </p>
+        <p><i>Contoh:</i> 245 = 2×10² + 4×10¹ + 5×10⁰.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Bilangan Biner (Base 2)</h3>
+        <p>
+          Hanya menggunakan angka 0 dan 1. 
+          Sangat penting dalam komputer dan sirkuit digital karena mewakili kondisi ON (1) dan OFF (0).
+        </p>
+        <p><i>Contoh:</i> 1011 (biner) = 11 (desimal).</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Bilangan Oktal (Base 8)</h3>
+        <p>
+          Menggunakan angka 0–7. 
+          Sering dipakai di sistem lama karena mudah dikonversi dari biner (setiap 3 bit = 1 angka oktal).
+        </p>
+        <p><i>Contoh:</i> 145 (oktal) = 101 (desimal).</p>
+      </div>
+
+      <div class="card">
+        <h3>4. Bilangan Heksadesimal (Base 16)</h3>
+        <p>
+          Menggunakan angka 0–9 dan huruf A–F (A=10, ..., F=15). 
+          Sangat populer di pemrograman, representasi warna, dan alamat memori.
+        </p>
+        <p><i>Contoh:</i> 2A (hex) = 42 (desimal).</p>
+      </div>
+    </section>
+
+    <section id="tabel">
+      <h2>Tabel Konversi Angka (1–20)</h2>
+      <table>
+        <tr>
+          <th>Desimal</th>
+          <th>Biner</th>
+          <th>Oktal</th>
+          <th>Heksadesimal</th>
+        </tr>
+        <tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+        <tr><td>2</td><td>10</td><td>2</td><td>2</td></tr>
+        <tr><td>3</td><td>11</td><td>3</td><td>3</td></tr>
+        <tr><td>4</td><td>100</td><td>4</td><td>4</td></tr>
+        <tr><td>5</td><td>101</td><td>5</td><td>5</td></tr>
+        <tr><td>6</td><td>110</td><td>6</td><td>6</td></tr>
+        <tr><td>7</td><td>111</td><td>7</td><td>7</td></tr>
+        <tr><td>8</td><td>1000</td><td>10</td><td>8</td></tr>
+        <tr><td>9</td><td>1001</td><td>11</td><td>9</td></tr>
+        <tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+        <tr><td>11</td><td>1011</td><td>13</td><td>B</td></tr>
+        <tr><td>12</td><td>1100</td><td>14</td><td>C</td></tr>
+        <tr><td>13</td><td>1101</td><td>15</td><td>D</td></tr>
+        <tr><td>14</td><td>1110</td><td>16</td><td>E</td></tr>
+        <tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+        <tr><td>16</td><td>10000</td><td>20</td><td>10</td></tr>
+        <tr><td>17</td><td>10001</td><td>21</td><td>11</td></tr>
+        <tr><td>18</td><td>10010</td><td>22</td><td>12</td></tr>
+        <tr><td>19</td><td>10011</td><td>23</td><td>13</td></tr>
+        <tr><td>20</td><td>10100</td><td>24</td><td>14</td></tr>
+      </table>
+    </section>
+
+    <section id="referensi">
+      <h2>Referensi</h2>
+      <ul>
+        <li>Rosen, K. H. (2012). <i>Discrete Mathematics and Its Applications</i>.</li>
+        <li>Thomas H. Cormen, et al. (2009). <i>Introduction to Algorithms</i>.</li>
+        <li><a href="https://www.petanikode.com/sistem-bilangan/" target="_blank">Petani Kode - Sistem Bilangan</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blog Pribadi | Dibuat untuk Tugas Kalkulus</p>
+  </footer>
+</body>
+</html>

@@ -40,5 +40,15 @@
   <footer>
     <p>© 2025 DIMAS | Universitas Wahid Hasyim Semarang</p>
   </footer>
+    <script>
+  const hour = new Date().getHours();
+  const body = document.body;
+
+  if (hour >= 6 && hour < 18) {
+    body.classList.add('day');
+  } else {
+    body.classList.add('night');
+  }
+</script>
 </body>
 </html>

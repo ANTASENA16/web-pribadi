@@ -27,16 +27,27 @@
       <div class="card"><h4>Praktikum Algoritma</h4><a href="matkul/praktikum.html">Detail</a></div>
       <div class="card"><h4>Sistem Teknologi Informasi</h4><a href="matkul/sistem-ti.html">Detail</a></div>
       <div class="card"><h4>Matematika Diskrit</h4><a href="matkul/diskrit.html">Detail</a></div>
-      <div class="card"><h4>Kalkulus</h4><a href="matkul/kalkulus.html">Detail</a></div>
-      <div class="card"><h4>Pendidikan Kewarganegaraan</h4><a href="matkul/pkn.html">Detail</a></div>
-      <div class="card"><h4>Pendidikan Agama</h4><a href="matkul/agama.html">Detail</a></div>
+      <div class="card"><h4>Kalkulus</h4>
+        <a href="tugas kalkulus/web_sistem_bilangan.html">membuat web sistem bilangan</a></div>
+      <div class="card"><h4>Pendidikan Kewarganegaraan</h4><a href="tugas pkn/.html">Detail</a></div>
+      <div class="card"><h4>Pendidikan Agama</h4>
+        <a href="tugas agama/Makalah Pendidikan Agama kelompok 6.docx">Tugas Makalah</a></div>
       <div class="card"><h4>Pendidikan Pancasila</h4><a href="matkul/pancasila.html">Detail</a></div>
       <div class="card"><h4>Bahasa Indonesia</h4><a href="matkul/bahasa.html">Detail</a></div>
 </section>
   </section>
-
   <footer>
     <p>© 2025 DIMAS | Universitas Wahid Hasyim Semarang</p>
   </footer>
+    <script>
+  const hour = new Date().getHours();
+  const body = document.body;
+
+  if (hour >= 6 && hour < 18) {
+    body.classList.add('day');
+  } else {
+    body.classList.add('night');
+  }
+</script>
 </body>
 </html>
